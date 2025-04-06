@@ -1,0 +1,53 @@
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #e6f0ff, #ffffff);
+    color: #003366;
+  }
+  
+  .hero-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-section p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .achievements-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background-color: #f8fbff;
+  }
+  
+  .box {
+    width: 300px;
+    height: 220px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 119, 255, 0.1);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .box:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 119, 255, 0.2);
+  }
+  
+  .box h3 {
+    color: #007bff;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .box p {
+    color: #555;
+    font-size: 16px;
+  }
+  

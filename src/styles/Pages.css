@@ -1,0 +1,14 @@
+.page {
+    padding: 60px;
+    text-align: center;
+    background-color: white;
+  }
+  
+  .title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #002244;
+    text-shadow: 1px 1px 5px rgba(0, 123, 255, 0.2);
+    transform: perspective(600px) rotateY(-1deg);
+  }
+  

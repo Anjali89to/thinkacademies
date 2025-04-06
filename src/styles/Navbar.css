@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 15px 30px;
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
+  }
+  
+  .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transform: perspective(500px) rotateX(3deg);
+  }
+  
+  .links a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .links a:hover {
+    transform: scale(1.1) translateY(-2px);
+    color: #ffdd00;
+    text-shadow: 0 0 5px #fff;
+  }
+  
