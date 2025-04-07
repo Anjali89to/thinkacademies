@@ -1,0 +1,525 @@
+/* 🌐 Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body, .digital-marketing-container {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #2575fc;
+}
+
+/* ✅ Hero Section */
+.hero-section {
+  background-color: #ffffff;
+  padding: 80px 20px;
+}
+
+.hero-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .hero-content-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.hero-image-wrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.hero-image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(37, 117, 252, 0.4) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: pulse-glow 2.8s ease-in-out infinite;
+  z-index: 0;
+  filter: blur(40px);
+}
+
+@keyframes pulse-glow {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+/* 🌐 Floating Social Icons */
+.floating-icons {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 2;
+}
+
+.icon {
+  font-size: 1.5rem;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 50%;
+  color: #2575fc;
+  animation: float 3s ease-in-out infinite;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.icon.fb { animation-delay: 0s; }
+.icon.ig { animation-delay: 0.5s; }
+.icon.li { animation-delay: 1s; }
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(10deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.hero-content {
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.hero-content .brand-message {
+  font-size: 1rem;
+  color: #2575fc;
+  line-height: 1.6;
+}
+
+/* ✅ Courses Section */
+.courses-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.courses-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.course-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .course-boxes {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.course-card {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 8px 8px 20px #d1d1d1, -8px -8px 20px #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.course-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 12px 12px 25px #bebebe, -12px -12px 25px #ffffff;
+}
+
+.course-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.course-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.course-card .fees {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #2575fc;
+}
+
+/* 🎯 3D Button */
+.three-d-btn {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 8px 0 #0052cc, 0 15px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.three-d-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 0 #0042a8, 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+.three-d-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #003380, 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔤 Heading Style */
+.three-d-heading {
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    1px 1px 0 #1a1a1a,
+    2px 2px 0 #1a1a1a,
+    3px 3px 0 #1a1a1a,
+    4px 4px 0 #1a1a1a;
+}
+
+/* 🔁 Marquee */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee h2 {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.blue-marquee {
+  color: dodgerblue !important;
+}
+.hero-text-bg {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp9H6IWdoiZx79Xuyn7w1dIhlDZVia7Wq_0w&s');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+  position: relative;
+}
+
+
+.hero-text-bg h1,
+.hero-text-bg p {
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-text-bg .learn-more-btn {
+  background-color: #ff6f00;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-text-bg .learn-more-btn:hover {
+  background-color: #e65100;
+}
+.services-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  color: #000; /* 🔥 Make all text inside this section black */
+}
+
+.services-section .center {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #000; /* Ensure heading stays black */
+}
+
+.services-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.services-list {
+  flex: 1;
+  min-width: 300px;
+  color: #000; /* 🔥 Ensure text here stays black */
+}
+
+.service-item {
+  margin-bottom: 20px;
+  color: #000; /* 🔥 Force black for safety */
+}
+
+.service-number {
+  color: #007bff;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.service-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000; /* 🔥 Heading black */
+}
+
+.service-item p {
+  font-size: 16px;
+  color: #000; /* 🔥 Paragraph black */
+}
+
+.services-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.services-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.service-item h3 {
+  transition: color 0.3s ease;
+  cursor: pointer;
+  color: black; /* Default color */
+}
+
+.service-item h3:hover {
+  color: #007bff; /* Blue on hover */
+}
+.service-number {
+  color: #007bff;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+
+.service-item h3:hover .service-number {
+  transform: scale(1.1);
+}
+.service-item h3 {
+  position: relative;
+  color: black;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50px; /* Makes it round */
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.service-item h3:hover,
+.service-item h3:focus {
+  color: #007bff;
+  background-color: rgba(0, 123, 255, 0.1); /* Light blue background */
+  border: 2px solid #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+.services-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch; /* Makes both sides same height */
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.services-list {
+  flex: 1;
+  min-width: 300px;
+}
+
+.service-item {
+  margin-bottom: 20px;
+}
+
+.service-item h3 {
+  position: relative;
+  color: black;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.service-item h3:hover {
+  color: #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+  border: 2px solid #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+.services-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-image img {
+  width: 100%;
+  height: auto;
+  max-height: 100%; /* Match height of text */
+  object-fit: cover;
+  border-radius: 10px;
+}
+.services-image img {
+  height: 100%;
+  max-height: 500px;
+}
+.course-list {
+  padding-left: 20px;
+  margin: 10px 0;
+  list-style-type: disc;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.course-list {
+  padding-left: 20px;
+  margin: 10px 0;
+  list-style-type: disc;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.course-list {
+  padding-left: 20px;
+  margin: 10px 0;
+  list-style-type: disc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.course-list li::marker {
+  color: #5ac8fa; /* Light blue bullet color */
+}
+.highlight-blue {
+  color: #007bff; /* Light blue, change to your preference */
+  font-weight: 500;
+}
+.book-now-btn {
+  background: linear-gradient(145deg, #3b82f6, #60a5fa); /* Blue gradient */
+  color: white;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #1e3a8a; /* Deep blue 3D shadow */
+  transition: all 0.2s ease;
+  margin-top: 20px;
+}
+
+.book-now-btn:hover {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #1e3a8a;
+  background: linear-gradient(145deg, #60a5fa, #93c5fd); /* Lighter blue on hover */
+}
+
+.book-now-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #1e3a8a;
+}
+.features-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  flex: 0 0 calc(33.333% - 20px);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: black;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.feature-box:hover {
+  color: #003366; /* Dark blue text */
+  box-shadow: 0 12px 20px rgba(0, 51, 102, 0.3); /* Bigger shadow */
+  transform: translateY(-10px) scale(1.03) rotateX(5deg); /* 3D effect */
+}
+
+.feature-box:hover h3,
+.feature-box:hover p {
+  color: #003366;
+}

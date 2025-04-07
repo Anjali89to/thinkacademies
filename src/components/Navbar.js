@@ -12,6 +12,7 @@ const Navbar = () => {
         <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>About</NavLink>
         <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink>
         <NavLink to="/achievements" className={({ isActive }) => isActive ? 'active' : ''}>Achievements</NavLink>
+        <NavLink to="/digital-marketing" className={({ isActive }) => isActive ? 'active' : ''}>Services</NavLink> {/* ✅ New link added */}
 
         {/* External links */}
         <a href="https://courses.thinkacademies.com" target="_blank" rel="noopener noreferrer">Courses</a>
