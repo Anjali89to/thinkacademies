@@ -9,6 +9,7 @@ const Home = () => {
       <section className="hero">
         <h1>Welcome to ThinkAcademies</h1>
         <p>Your gateway to success through smart education and career development.</p>
+
       </section>
 
       {/* Highlight Boxes Section */}

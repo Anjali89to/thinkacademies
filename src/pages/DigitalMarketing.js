@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import "../styles/DigitalMarketing.css";
 
-// ✅ Services Data
 const services = [
   {
     title: "Website Development & Performance",
@@ -31,91 +30,65 @@ const services = [
   },
 ];
 
-// ✅ Courses Data
 const courses = [
   {
     title: "Web Developer Course",
-    description: (
-      <div>
-        <p><strong>Perfect for Small Businesses & Startups</strong></p>
-        <ul className="course-list">
-          <li>Static Website</li>
-          <li><span className="highlight-blue">Free</span> Hosting (1 Year)</li>
-          <li>Custom Website Design</li>
-          <li>Subdomain – <span className="highlight-blue">Free</span></li>
-          <li>Mobile Optimization & Responsive Design – <span className="highlight-blue">Free</span></li>
-          <li>SEO-Friendly URLs – <span className="highlight-blue">Free</span></li>
-          <li>Google My Business (GMB) Listing – <span className="highlight-blue">Free</span></li>
-          <li>3 Digital Visiting Cards – <span className="highlight-blue">Free</span></li>
-          <li>Google Location Map Integration</li>
-          <li>Social Media Integration</li>
-          <li>Basic SSL Certificate – <span className="highlight-blue">Free!</span></li>
-          <li>XML Sitemap & URL Submission</li>
-          <li>Google Analytics Setup – <span className="highlight-blue">Free!</span></li>
-          <li>Website Training (Up to 2 Hrs)</li>
-        </ul>
-        <div className="book-buttons">
-          <button className="book-now-btn">Book Now</button>
-        </div>
-      </div>
-    ),
-    fees: "10999/month",
+    fees: "10999",
+    features: [
+      "Static Website",
+      "Free Hosting (1 Year)",
+      "Custom Website Design",
+      "Free Subdomain",
+      "Free Mobile Optimization & Responsive Design",
+      "Free SEO-Friendly URLs",
+      "Free Google My Business (GMB) Listing",
+      "3 Digital Visiting Cards - Free",
+      "Google Location Map Integration",
+      "Social Media Integration",
+      "Free Basic SSL Certificate",
+      "XML Sitemap & URL Submission",
+      "Free Google Analytics Setup",
+      "Website Training (Up to 2 Hrs)",
+    ],
   },
   {
     title: "SEO Course",
-    description: (
-      <div>
-        <p><strong>Ideal for growing businesses</strong></p>
-        <ul className="course-list">
-          <li>Keywords Optimized - 30</li>
-          <li>Pages Optimized - 5</li>
-          <li>SEO Audit & Analysis - <span className="highlight-blue">Free!</span></li>
-          <li>Meta Title & Description Optimization - <span className="highlight-blue">Free!</span></li>
-          <li>Header (H1, H2, H3) Optimization - <span className="highlight-blue">Free!</span></li>
-          <li>Image Optimization & Alt Tags - <span className="highlight-blue">Free!</span></li>
-          <li>URL Structure Optimization - <span className="highlight-blue">Free!</span></li>
-          <li>Robots.txt & XML Sitemap Setup - <span className="highlight-blue">Free!</span></li>
-          <li>Google Search Console & Analytics Setup - <span className="highlight-blue">Free!</span></li>
-          <li>On-Page SEO Fixes - <span className="highlight-blue">Free!</span></li>
-          <li>Off-Page SEO (Backlinks) - 50</li>
-          <li>Website Speed Optimization - <span className="highlight-blue">Free!</span></li>
-          <li>SSL & HTTPS Optimization - <span className="highlight-blue">Free!</span></li>
-          <li>Fixing Broken Links & Redirections – <span className="highlight-blue">Free!</span></li>
-          <li>SEO Reporting & Analysis – Monthly Report!</li>
-          <li>Dedicated SEO Specialist – <span className="highlight-blue">Free!</span></li>
-        </ul>
-        <div className="book-buttons">
-          <button className="book-now-btn">Book Now</button>
-        </div>
-      </div>
-    ),
-    fees: "10999/month",
+    fees: "10999",
+    features: [
+      "Keywords Optimized - 30",
+      "Pages Optimized - 5",
+      "Free SEO Audit & Analysis",
+      "Free Meta Title & Description Optimization",
+      "Free Header (H1, H2, H3) Optimization",
+      "Free Image Optimization & Alt Tags",
+      "Free URL Structure Optimization",
+      "Free Robots.txt & XML Sitemap Setup",
+      "Free Google Search Console & Analytics Setup",
+      "Free On-Page SEO Fixes",
+      "Off-Page SEO (Backlinks) - 50",
+      "Free Website Speed Optimization",
+      "Free SSL & HTTPS Optimization",
+      "Free Fixing Broken Links & Redirections",
+      "Monthly SEO Reporting",
+      "Free Dedicated SEO Specialist",
+    ],
   },
   {
-    title: "Basic Digital Marketing Package",
-    description: (
-      <div>
-        <p><strong>The Ultimate Business Growth Package!</strong></p>
-        <ul className="course-list">
-          <li><strong>SEO:</strong> 10 Keywords, On-Page & Off-Page SEO, Technical SEO, Monthly Report</li>
-          <li><strong>Social Media Optimization (SMO):</strong> 15 Social Media Posts, Facebook & Instagram, Organic Growth</li>
-          <li><strong>Pay-Per-Click (PPC) Ads:</strong> Not Included</li>
-          <li><strong>Content Marketing:</strong> 1 Blog/Month, Website Content Optimization, Social Media Captions</li>
-          <li><strong>Website Optimization:</strong> Basic Audit, Mobile Optimization</li>
-          <li><strong>Google My Business (GMB):</strong> Basic Setup & Optimization</li>
-          <li><strong>Reporting & Analytics:</strong> Monthly Reports</li>
-          <li><strong>Support:</strong> Email & Chat Support</li>
-        </ul>
-        <div className="book-buttons">
-          <button className="book-now-btn">Book Now</button>
-        </div>
-      </div>
-    ),
-    fees: "27,999",
+    title: "Digital Marketing Course",
+    fees: "27999",
+    features: [
+      "SEO: 10 Keywords, On-Page & Off-Page SEO, Technical SEO, Monthly Report",
+      "SMO: 15 Social Media Posts, Facebook & Instagram, Organic Growth",
+      "PPC Ads: Not Included",
+      "Content Marketing: 1 Blog/Month, Website Content Optimization, Social Media Captions",
+      "Website Optimization: Basic Audit, Mobile Optimization",
+      "Google My Business: Basic Setup & Optimization",
+      "Monthly Reports",
+      "Email & Chat Support",
+    ],
   },
 ];
 
-// ✅ Features Data
 const features = [
   {
     title: "Real-World Training",
@@ -136,9 +109,30 @@ const features = [
 ];
 
 const DigitalMarketing = () => {
+  const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    course: "",
+    price: "",
+  });
+
+  const handleBookNowClick = () => {
+    setShowForm(true);
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Form Submitted!\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCourse: ${formData.course}\nPrice: ₹${formData.price}`);
+    setFormData({ name: "", email: "", phone: "", course: "", price: "" });
+    setShowForm(false);
+  };
+
   return (
     <div className="digital-marketing-container">
-      {/* ✅ Hero Section */}
+      {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content-wrapper">
           <div className="hero-image-wrapper">
@@ -177,7 +171,7 @@ const DigitalMarketing = () => {
         </div>
       </section>
 
-      {/* ✅ Our Services Section */}
+      {/* Services Section */}
       <section className="services-section">
         <h2 className="three-d-heading center">Our Services</h2>
         <div className="services-wrapper">
@@ -203,21 +197,81 @@ const DigitalMarketing = () => {
         </div>
       </section>
 
-      {/* ✅ Courses Section */}
+      {/* Courses Section */}
       <section className="courses-section" id="courses-section">
         <h2 className="three-d-heading">Our Top Courses</h2>
         <div className="course-boxes">
           {courses.map((course, index) => (
             <div className="course-card" key={index}>
               <h3>{course.title}</h3>
-              <p>{course.description}</p>
+              <ul className="course-list">
+                {course.features.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
               <span className="fees">Fees: ₹{course.fees}</span>
+              <div className="book-buttons">
+                <button
+                  className="book-now-btn"
+                  onClick={() => {
+                    setFormData({ ...formData, course: course.title, price: course.fees });
+                    handleBookNowClick();
+                  }}
+                >
+                  Book Now
+                </button>
+              </div>
             </div>
           ))}
         </div>
+
+        {/* Form Section */}
+        {showForm && (
+          <div className="form-section">
+            <h3 className="form-heading">Fill Your Details</h3>
+            <form className="booking-form" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Name"
+                value={formData.name}
+                required
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                value={formData.email}
+                required
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              />
+              <input
+                type="tel"
+                placeholder="Phone"
+                value={formData.phone}
+                required
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              />
+              <input
+                type="text"
+                placeholder="Course Name"
+                value={formData.course}
+                readOnly
+              />
+              <input
+                type="text"
+                placeholder="Course Price"
+                value={`₹${formData.price}`}
+                readOnly
+              />
+              <button type="submit" className="submit-btn">
+                Submit
+              </button>
+            </form>
+          </div>
+        )}
       </section>
 
-      {/* ✅ Features Section */}
+      {/* Features Section */}
       <section className="features-section">
         <h2 className="three-d-heading center">Our Features</h2>
         <div className="features-boxes">
@@ -234,3 +288,4 @@ const DigitalMarketing = () => {
 };
 
 export default DigitalMarketing;
+
