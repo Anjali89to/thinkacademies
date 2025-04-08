@@ -1,39 +1,64 @@
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin: 0;
+}
+
 .social-icons {
-    display: flex;
-    flex-direction: row;     /* 👈 Row-wise icons */
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;               /* 👈 Space between icons */
-    margin-top: 1rem;
+  margin-top: 20px;
+}
+
+.icon {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #00bfae; /* Change this to your hover color */
+}
+
+/* Footer Navigation Links */
+.footer-nav {
+  margin-top: 20px;
+}
+
+.footer-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .footer-nav ul li {
+    display: block;
+    margin-bottom: 10px;
   }
-  
+
   .icon {
-    font-size: 2rem;
-    color: white;
-    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 20px;
   }
-  
-  .icon:hover {
-    transform: scale(1.2);
-  }
-  
-  .instagram:hover {
-    color: #E1306C;
-  }
-  
-  .twitter:hover {
-    color: #1DA1F2;
-  }
-  
-  .linkedin:hover {
-    color: #0077B5;
-  }
-  .footer {
-    background-color: #1e3a8a; /* 🔵 Navy blue */
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%;
-  }
-  
+}

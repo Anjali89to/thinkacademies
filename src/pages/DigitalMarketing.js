@@ -190,7 +190,7 @@ const DigitalMarketing = () => {
           </div>
           <div className="services-image">
             <img
-              src="https://th.bing.com/th/id/OIP.ialWyOANxMR_lCqRbPofIAHaE8?w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2"
+              src="https://th.bing.com/th/id/OIP.sdj2SRWc0316XwiwpfWAkQAAAA?pid=ImgDet&w=159&h=159&c=7"
               alt="Our Services"
             />
           </div>
