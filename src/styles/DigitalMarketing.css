@@ -523,3 +523,264 @@ body, .digital-marketing-container {
 .feature-box:hover p {
   color: #003366;
 }
+.form-section {
+  background: #f7f9fc;
+  padding: 2rem;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.booking-form input {
+  margin: 0.5rem;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* ✅ FEATURES SECTION */
+.features-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.features-heading {
+  margin-bottom: 40px;
+}
+
+.features-heading h2 {
+  font-size: 2.5rem;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.features-heading p {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.features-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  text-align: center;
+  flex: 1;
+  max-width: 30%;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.feature-box h3 {
+  font-size: 1.75rem;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.feature-box p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+/* ✅ Horizontal Boxes Section */
+.horizontal-boxes {
+  display: flex;
+  justify-content: space-between; /* Distribute the boxes evenly across the row */
+  gap: 20px; /* Space between the boxes */
+  padding: 40px 20px; /* Padding for the section */
+}
+
+.horizontal-box {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+  text-align: center;
+  width: 30%; /* Each box takes 30% of the container width */
+  transition: all 0.3s ease;
+}
+
+.horizontal-box h4 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.horizontal-box p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.horizontal-box:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3); /* Enhance the box shadow */
+}
+
+/* Google My Business Image Styling */
+.gmb-image {
+  max-width: 100px; /* Limit image size */
+  margin-top: 10px; /* Add space above the image */
+  margin-bottom: 10px; /* Add space below the image */
+}
+/* Features Section */
+.features-section {
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+}
+
+.features-heading h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.features-heading p {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+}
+
+.features-boxes {
+  display: flex; /* Use flexbox to align items horizontally */
+  justify-content: space-between; /* Ensure even spacing between boxes */
+  margin-top: 30px;
+}
+
+.features-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Ensure each box takes up 30% width */
+  text-align: center;
+  margin-bottom: 20px; /* Space between the boxes */
+  transition: transform 0.3s ease;
+}
+
+.features-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-top: 20px;
+}
+
+.features-box h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.features-box p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.features-box:hover {
+  transform: translateY(-10px);
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .features-boxes {
+    flex-direction: column; /* Stack boxes vertically on smaller screens */
+    align-items: center; /* Center the boxes */
+  }
+
+  .features-box {
+    width: 80%; /* Take up more width on smaller screens */
+    margin-bottom: 20px; /* Space between the stacked boxes */
+  }
+}
+/* Features Section */
+.features-section {
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+}
+
+.features-heading h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.features-heading p {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+}
+
+.features-boxes {
+  display: flex; /* Use flexbox to align items horizontally */
+  justify-content: space-between; /* Even space between the boxes */
+  margin-top: 30px;
+}
+
+.features-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Each box will take up 30% width */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.features-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-top: 20px;
+}
+
+.features-box h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.features-box p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.features-box:hover {
+  transform: translateY(-10px);
+}
+
+/* For smaller screens, ensure they still fit in one row */
+@media (max-width: 1024px) {
+  .features-box {
+    width: 30%; /* Keep each box at 30% width */
+  }
+}
+
+@media (max-width: 768px) {
+  .features-box {
+    width: 100%; /* Ensure each box takes full width on smaller screens */
+    margin-bottom: 20px; /* Add space between the stacked boxes */
+  }
+}
