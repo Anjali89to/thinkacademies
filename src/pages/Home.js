@@ -3,8 +3,6 @@ import CountUp from 'react-countup';
 import { FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa';
 import '../styles/Home.css';
 
-import '../styles/Home.css';
-
 const Home = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -64,26 +62,14 @@ const Home = () => {
       <section className="highlight-section">
         <div className="highlight-box">
           <h3>
-<<<<<<< HEAD
-            <span className="highlight-number">
-              <CountUp end={240} duration={2} />+
-            </span>{' '}
-=======
             <span className="highlight-number"><CountUp end={240} duration={2} />+</span>{' '}
->>>>>>> 1a450ce04dbf6ebfc0fdfbfa81bda0d37b171deb
             Organizations Satisfied
           </h3>
           <p>We’ve helped 240+ businesses achieve digital excellence.</p>
         </div>
         <div className="highlight-box">
           <h3>
-<<<<<<< HEAD
-            <span className="highlight-number">
-              <CountUp end={256} duration={2} />+
-            </span>{' '}
-=======
             <span className="highlight-number"><CountUp end={256} duration={2} />+</span>{' '}
->>>>>>> 1a450ce04dbf6ebfc0fdfbfa81bda0d37b171deb
             Projects/Quarter
           </h3>
           <p>Delivering 256+ successful projects every quarter across domains.</p>
@@ -101,67 +87,6 @@ const Home = () => {
           <p>Explore what makes our services stand out in the digital landscape.</p>
         </div>
         <div className="features-boxes">
-<<<<<<< HEAD
-          <div className="features-box">
-            <img
-              src="https://www.elearninfotech.com/img/skills/digitalmarketing/google-ads.webp"
-              alt="Google Ads"
-              className="feature-img"
-            />
-            <h3>Google My Business (GMB)</h3>
-            <p>Enhance local visibility with optimized GMB listings.</p>
-          </div>
-
-          <div className="features-box">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl0I0lp5K9oTkcQNRqvnye0rY_tybaByhuUaP_BNgSH569apwOlMcyjWWiIfeK6k60HK8&usqp=CAU"
-              alt="SEO Strategy"
-              className="feature-img"
-            />
-            <h3>SEO-Driven Strategy</h3>
-            <p>Boost your search rankings with effective SEO techniques.</p>
-          </div>
-
-          <div className="features-box">
-            <img
-              src="https://th.bing.com/th/id/OIP.CLBVr2MZCQHk1-Mb_rWIAQHaHa?pid=ImgDet&w=159&h=159&c=7"
-              alt="Content Marketing"
-              className="feature-img"
-            />
-            <h3>Content Creation</h3>
-            <p>Drive engagement with high-quality, relevant content across platforms.</p>
-          </div>
-
-          <div className="features-box">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/4202/4202840.png"
-              alt="Analytics"
-              className="feature-img"
-            />
-            <h3>Advanced Analytics</h3>
-            <p>Track, measure, and refine your digital campaigns with precision.</p>
-          </div>
-
-          <div className="features-box">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png"
-              alt="Social Media"
-              className="feature-img"
-            />
-            <h3>Social Media Marketing</h3>
-            <p>Connect with your audience through curated social strategies.</p>
-          </div>
-
-          <div className="features-box">
-            <img
-              src="https://bowwe.com/upload/domain/37991/images/university/recruitment-specialist.webp?3820038"
-              alt="Email Strategy"
-              className="feature-img"
-            />
-            <h3>Email Campaigns</h3>
-            <p>Send impactful emails that nurture leads and improve conversions.</p>
-          </div>
-=======
           {[
             {
               title: "Google My Business (GMB)",
@@ -200,7 +125,6 @@ const Home = () => {
               <p>{feature.desc}</p>
             </div>
           ))}
->>>>>>> 1a450ce04dbf6ebfc0fdfbfa81bda0d37b171deb
         </div>
       </section>
 
@@ -224,10 +148,6 @@ const Home = () => {
 
               <button type="submit" className="submit-btn">Send Message</button>
             </form>
-<<<<<<< HEAD
-
-=======
->>>>>>> 1a450ce04dbf6ebfc0fdfbfa81bda0d37b171deb
             {formSubmitted && (
               <p className="success-message">✅ Your message has been sent successfully!</p>
             )}
@@ -235,11 +155,7 @@ const Home = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Footer with Social Media */}
-=======
       {/* Footer Section */}
->>>>>>> 1a450ce04dbf6ebfc0fdfbfa81bda0d37b171deb
       <footer className="footer-section">
         <div className="social-icons">
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
@@ -252,3 +168,4 @@ const Home = () => {
 };
 
 export default Home;
+
