@@ -21,4 +21,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; mere porject m yeh h n 
+export default Navbar;  
