@@ -12,6 +12,7 @@ const Navbar = () => {
         <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>About</NavLink>
         <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <NavLink to="/achievements" className={({ isActive }) => isActive ? 'active' : ''}>Achievements</NavLink>
 <<<<<<< HEAD
         
@@ -21,9 +22,12 @@ const Navbar = () => {
 =======
         <NavLink to="/digital-marketing" className={({ isActive }) => isActive ? 'active' : ''}>Services</NavLink> {/* ✅ New link added */}
 >>>>>>> 1e7d0b4a94826afecb23305a2e973bb3e001a842
+=======
+        <NavLink to="/digital-marketing" className={({ isActive }) => isActive ? 'active' : ''}>Services</NavLink> {/* ✅ Keep this one */}
+>>>>>>> 1a450ce04dbf6ebfc0fdfbfa81bda0d37b171deb
 
         {/* External links */}
-<a href="https://thinkacademies.com/digital-marketing" className="external-link">Digital Marketing</a>
+        <a href="https://thinkacademies.com/digital-marketing" className="external-link">Digital Marketing</a>
         <a href="https://courses.thinkacademies.com" target="_blank" rel="noopener noreferrer">Courses</a>
       </div>
     </nav>

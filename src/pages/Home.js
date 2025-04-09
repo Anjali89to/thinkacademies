@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CountUp from 'react-countup';
 import { FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa';
+import '../styles/Home.css';
 
 import '../styles/Home.css';
 
@@ -17,12 +18,6 @@ const Home = () => {
   return (
     <main className="home-container">
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="hero">
-        <h1>Welcome to ThinkAcademies</h1>
-        <p>Your gateway to success through smart education and career development.</p>
-
-=======
       <section className="hero hero-flex">
         <div className="hero-text">
           <h1>Unlock Your Brand's True Potential</h1>
@@ -35,7 +30,6 @@ const Home = () => {
             <button className="hero-btn">Explore Services</button>
           </a>
         </div>
-
         <div className="hero-image-container">
           <img
             src="https://divethru.com/wp-content/uploads/2022/11/app-2.png"
@@ -43,7 +37,6 @@ const Home = () => {
             className="hero-image"
           />
         </div>
->>>>>>> 08bb6e99e9366049d61e5a578a2bfd043267ff2e
       </section>
 
       {/* Services Section */}
@@ -71,18 +64,26 @@ const Home = () => {
       <section className="highlight-section">
         <div className="highlight-box">
           <h3>
+<<<<<<< HEAD
             <span className="highlight-number">
               <CountUp end={240} duration={2} />+
             </span>{' '}
+=======
+            <span className="highlight-number"><CountUp end={240} duration={2} />+</span>{' '}
+>>>>>>> 1a450ce04dbf6ebfc0fdfbfa81bda0d37b171deb
             Organizations Satisfied
           </h3>
           <p>We’ve helped 240+ businesses achieve digital excellence.</p>
         </div>
         <div className="highlight-box">
           <h3>
+<<<<<<< HEAD
             <span className="highlight-number">
               <CountUp end={256} duration={2} />+
             </span>{' '}
+=======
+            <span className="highlight-number"><CountUp end={256} duration={2} />+</span>{' '}
+>>>>>>> 1a450ce04dbf6ebfc0fdfbfa81bda0d37b171deb
             Projects/Quarter
           </h3>
           <p>Delivering 256+ successful projects every quarter across domains.</p>
@@ -99,8 +100,8 @@ const Home = () => {
           <h2>Our Features</h2>
           <p>Explore what makes our services stand out in the digital landscape.</p>
         </div>
-
         <div className="features-boxes">
+<<<<<<< HEAD
           <div className="features-box">
             <img
               src="https://www.elearninfotech.com/img/skills/digitalmarketing/google-ads.webp"
@@ -160,6 +161,46 @@ const Home = () => {
             <h3>Email Campaigns</h3>
             <p>Send impactful emails that nurture leads and improve conversions.</p>
           </div>
+=======
+          {[
+            {
+              title: "Google My Business (GMB)",
+              img: "https://www.elearninfotech.com/img/skills/digitalmarketing/google-ads.webp",
+              desc: "Enhance local visibility with optimized GMB listings."
+            },
+            {
+              title: "SEO-Driven Strategy",
+              img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl0I0lp5K9oTkcQNRqvnye0rY_tybaByhuUaP_BNgSH569apwOlMcyjWWiIfeK6k60HK8&usqp=CAU",
+              desc: "Boost your search rankings with effective SEO techniques."
+            },
+            {
+              title: "Content Creation",
+              img: "https://th.bing.com/th/id/OIP.CLBVr2MZCQHk1-Mb_rWIAQHaHa?pid=ImgDet&w=159&h=159&c=7",
+              desc: "Drive engagement with high-quality, relevant content across platforms."
+            },
+            {
+              title: "Advanced Analytics",
+              img: "https://cdn-icons-png.flaticon.com/512/4202/4202840.png",
+              desc: "Track, measure, and refine your digital campaigns with precision."
+            },
+            {
+              title: "Social Media Marketing",
+              img: "https://cdn-icons-png.flaticon.com/512/2965/2965567.png",
+              desc: "Connect with your audience through curated social strategies."
+            },
+            {
+              title: "Email Campaigns",
+              img: "https://bowwe.com/upload/domain/37991/images/university/recruitment-specialist.webp?3820038",
+              desc: "Send impactful emails that nurture leads and improve conversions."
+            },
+          ].map((feature, i) => (
+            <div className="features-box" key={i}>
+              <img src={feature.img} alt={feature.title} className="feature-img" />
+              <h3>{feature.title}</h3>
+              <p>{feature.desc}</p>
+            </div>
+          ))}
+>>>>>>> 1a450ce04dbf6ebfc0fdfbfa81bda0d37b171deb
         </div>
       </section>
 
@@ -169,7 +210,6 @@ const Home = () => {
           <div className="contact-image">
             <img src="https://www.codeologyai.com/DM/30.svg" alt="Contact Us Illustration" />
           </div>
-
           <div className="contact-form">
             <h2>Contact Us</h2>
             <form onSubmit={handleSubmit}>
@@ -184,7 +224,10 @@ const Home = () => {
 
               <button type="submit" className="submit-btn">Send Message</button>
             </form>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1a450ce04dbf6ebfc0fdfbfa81bda0d37b171deb
             {formSubmitted && (
               <p className="success-message">✅ Your message has been sent successfully!</p>
             )}
@@ -192,7 +235,11 @@ const Home = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Footer with Social Media */}
+=======
+      {/* Footer Section */}
+>>>>>>> 1a450ce04dbf6ebfc0fdfbfa81bda0d37b171deb
       <footer className="footer-section">
         <div className="social-icons">
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
