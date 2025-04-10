@@ -24,9 +24,10 @@ const Home = () => {
             Our AI-powered strategies are built to captivate, convert, and accelerate your growth.
             From powerful SEO to scroll-stopping social media, we turn your vision into visible impact.
           </p>
-          <a href="http://localhost:3000/digital-marketing" target="_blank" rel="noopener noreferrer">
-            <button className="hero-btn">Explore Services</button>
-          </a>
+          <a href="/service" target="_blank" rel="noopener noreferrer">
+  <button className="hero-btn">Explore Services</button>
+</a>
+
         </div>
         <div className="hero-image-container">
           <img
@@ -155,14 +156,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Footer Section */}
-      <footer className="footer-section">
-        <div className="social-icons">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
-        </div>
-      </footer>
+      //{/* Footer Section */}
+      
     </main>
   );
 };

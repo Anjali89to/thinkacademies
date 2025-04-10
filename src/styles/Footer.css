@@ -1,6 +1,6 @@
 .footer {
-  background-color: #111;
-  color: #f1f1f1;
+  background-color: #111; /* Black background */
+  color: #fff; /* White text */
   padding: 40px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -22,7 +22,7 @@
   font-size: 20px;
   margin-bottom: 15px;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff; /* White title text */
 }
 
 .footer-list {
@@ -33,7 +33,7 @@
 }
 
 .footer-list li {
-  color: #ddd;
+  color: #ddd; /* Light gray text */
 }
 
 .footer-list a {
@@ -44,7 +44,7 @@
 
 .footer-list a:hover,
 .footer-list a:focus {
-  color: #00bcd4;
+  color: #00bcd4; /* Highlight color on hover */
   text-decoration: underline;
 }
 
@@ -56,19 +56,62 @@
 
 .icon {
   font-size: 26px;
-  color: #e0e0e0;
+  color: #e0e0e0; /* Light gray icons */
   transition: color 0.3s ease;
 }
 
 .icon:hover,
 .icon:focus {
-  color: #00bcd4;
+  color: #00bcd4; /* Highlight color on hover */
 }
 
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
   font-size: 16px;
-  color: #ccc;
+  color: #ccc; /* Light gray text */
   letter-spacing: 0.5px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr; /* Stacks all columns in a single column */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .footer-title {
+    font-size: 18px;
+  }
+
+  .footer-list {
+    font-size: 14px;
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  .footer-bottom {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-title {
+    font-size: 16px;
+  }
+
+  .footer-list {
+    font-size: 13px;
+  }
+
+  .icon {
+    font-size: 22px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
 }

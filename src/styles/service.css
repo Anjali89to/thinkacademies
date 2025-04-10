@@ -29,11 +29,11 @@
   box-sizing: border-box;
   text-align: left;
   transition: transform 0.3s ease;
-  height: auto;                /* Auto height based on content */
-  overflow: visible;           /* No scroll inside box */
+  height: auto; /* Auto height based on content */
+  overflow: visible; /* No scroll inside box */
   word-break: break-word;
   white-space: normal;
-  display: flex;               /* Allow flexible vertical layout */
+  display: flex; /* Allow flexible vertical layout */
   flex-direction: column;
 }
 
@@ -78,32 +78,20 @@ li {
   .three-boxes-container {
     flex-direction: column;
     align-items: center;
+    gap: 20px; /* Reduce gap on smaller screens */
   }
 
   .box {
     max-width: 90%;
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  .heading {
+    font-size: 2rem; /* Slightly smaller heading on mobile */
   }
 }
 
-.pricing-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: #0a66c2;
-  color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.pricing-button:hover {
-  background-color: #084c96;
-  transform: translateY(-2px);
-}
-
+/* Modal and Overlay */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -115,6 +103,7 @@ li {
   justify-content: center;
   align-items: center;
   z-index: 999;
+  transition: opacity 0.3s ease;
 }
 
 .modal {
@@ -123,7 +112,7 @@ li {
   border-radius: 12px;
   width: 90%;
   max-width: 500px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
@@ -175,3 +164,9 @@ li {
   font-size: 0.95rem;
   cursor: pointer;
 }
+
+/* Accessibility and Focus Styles */
+.modal input:focus, .submit-button:focus, .close-button:focus {
+  outline: 2px solid #0a66c2; /* Focus outline to improve accessibility */
+}
+

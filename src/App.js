@@ -5,7 +5,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import DigitalMarketing from './pages/DigitalMarketing'; // ✅ Import DigitalMarketing page
+import Service from './pages/service'; // Fixed the import to use uppercase "S"
+
 import './styles/theme.css';
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/digital-marketing" element={<DigitalMarketing />} /> {/* ✅ New Route added */}
+        <Route path="/service" element={<Service />} /> {/* Changed "service" to "Service" */}
       </Routes>
       <Footer />
     </Router>

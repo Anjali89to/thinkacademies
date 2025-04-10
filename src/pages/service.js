@@ -1,16 +1,20 @@
 import React, { useState } from "react";
-import "../styles/DigitalMarketing.css";
+import "../styles/service.css"; // Ensure your CSS file is correctly named
 
-const DigitalMarketing = () => {
+const Service = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState("");
 
+  // Function to open the modal when a plan is clicked
   const handleOpenModal = (plan) => {
+    console.log("Opening modal for plan:", plan); // Debug log
     setSelectedPlan(plan);
     setIsModalOpen(true);
   };
 
+  // Function to close the modal
   const handleCloseModal = () => {
+    console.log("Closing modal"); // Debug log
     setIsModalOpen(false);
     setSelectedPlan("");
   };
@@ -76,5 +80,4 @@ const DigitalMarketing = () => {
   );
 };
 
-export default DigitalMarketing;
-
+export default Service; 
