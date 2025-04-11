@@ -73,6 +73,23 @@ li {
   word-break: break-word;
 }
 
+/* Button styles */
+.pricing-button {
+  background-color: #1d3c6b; /* Dark Blue */
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pricing-button:hover {
+  background-color: #153b5d; /* Darker shade of blue for hover */
+  transform: scale(1.05);
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .three-boxes-container {
@@ -169,4 +186,3 @@ li {
 .modal input:focus, .submit-button:focus, .close-button:focus {
   outline: 2px solid #0a66c2; /* Focus outline to improve accessibility */
 }
-
