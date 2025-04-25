@@ -112,10 +112,6 @@
 .services-text {
   flex: 1;
   padding-right: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
 }
 
 .services-text h2 {
@@ -146,47 +142,17 @@
   margin: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   width: calc(33.33% - 30px);
   margin-bottom: 20px;
-  position: relative;
 }
 
-/* Hover effect */
 .services-single .services-box:hover {
-  background-color: #1d3c6b; /* Dark Blue */
+  background-color: #1d3c6b;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
   color: #fff;
-}
-
-.services-single .services-box:hover .services-text h2,
-.services-single .services-box:hover .services-text p {
-  color: #fff; /* Text color change on hover */
-}
-
-.services-single .services-box .services-text {
-  padding: 15px;
-  transition: color 0.3s ease;
-}
-
-/* Optional: Create a dark blue overlay effect */
-.services-single .services-box::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1; /* Ensure it sits behind the text */
-}
-
-.services-single .services-box:hover::after {
-  opacity: 1; /* Show the dark overlay on hover */
 }
 
 /* Highlight Section */
@@ -367,4 +333,4 @@
     padding: 12px 24px;
     font-size: 1.1rem;
   }
-}
+} /* 👈 This is what was missing */

@@ -1,22 +1,47 @@
 import React, { useState } from "react";
-import "../styles/service.css"; // Ensure your CSS file is correctly named
+import "../styles/service.css"; // Make sure this path is correct
 
 const Service = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+  const [successMessage, setSuccessMessage] = useState("");
 
-  // Function to open the modal when a plan is clicked
+  // Open Modal with selected plan
   const handleOpenModal = (plan) => {
-    console.log("Opening modal for plan:", plan); // Debug log
     setSelectedPlan(plan);
     setIsModalOpen(true);
+    setSuccessMessage("");
   };
 
-  // Function to close the modal
+  // Close modal and reset form
   const handleCloseModal = () => {
-    console.log("Closing modal"); // Debug log
     setIsModalOpen(false);
     setSelectedPlan("");
+    setFormData({ name: "", email: "", phone: "" });
+  };
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  // Handle form submission without API
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSuccessMessage("✅ Booking successful!");
+    setFormData({ name: "", email: "", phone: "" });
+    setTimeout(() => {
+      setIsModalOpen(false);
+    }, 2000); // auto-close after 2s
   };
 
   return (
@@ -24,7 +49,7 @@ const Service = () => {
       <h2 className="heading">Our Digital Marketing Services</h2>
       <div className="three-boxes-container">
         {["Basic", "Standard", "Professional"].map((plan, idx) => {
-          const prices = ["₹10999/month", "₹10999/month", "₹27,999/month"];
+          const prices = ["₹10999/month", "₹17,999/month", "₹27,999/month"];
           const descriptions = [
             "Perfect for Small Businesses & Startups",
             "For Growing Businesses Ready to Scale",
@@ -61,17 +86,46 @@ const Service = () => {
         <div className="modal-overlay">
           <div className="modal">
             <h2>Get Started</h2>
-            <form className="modal-form">
+            <form className="modal-form" onSubmit={handleSubmit}>
               <label>Name:</label>
-              <input type="text" placeholder="Your name" required />
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Your name"
+                required
+              />
+
               <label>Email:</label>
-              <input type="email" placeholder="Your email" required />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Your email"
+                required
+              />
+
               <label>Phone:</label>
-              <input type="tel" placeholder="Your phone number" required />
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Your phone number"
+                required
+              />
+
               <label>Selected Plan:</label>
               <input type="text" value={selectedPlan} readOnly />
+
               <button type="submit" className="submit-button">Submit</button>
               <button type="button" className="close-button" onClick={handleCloseModal}>Cancel</button>
+
+              {successMessage && (
+                <p style={{ marginTop: "10px", color: "green" }}>{successMessage}</p>
+              )}
             </form>
           </div>
         </div>
@@ -80,4 +134,4 @@ const Service = () => {
   );
 };
 
-export default Service; 
+export default Service;

@@ -5,12 +5,26 @@ import '../styles/Home.css';
 
 const Home = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Since no API call is needed, just reset the form and show a success message
     setFormSubmitted(true);
-    e.target.reset();
-    setTimeout(() => setFormSubmitted(false), 3000);
+    setFormData({ name: '', email: '', message: '' });  // Clear form after submission
+    setTimeout(() => setFormSubmitted(false), 3000); // Hide success message after 3 seconds
   };
 
   return (
@@ -25,9 +39,8 @@ const Home = () => {
             From powerful SEO to scroll-stopping social media, we turn your vision into visible impact.
           </p>
           <a href="/service" target="_blank" rel="noopener noreferrer">
-  <button className="hero-btn">Explore Services</button>
-</a>
-
+            <button className="hero-btn">Explore Services</button>
+          </a>
         </div>
         <div className="hero-image-container">
           <img
@@ -88,38 +101,36 @@ const Home = () => {
           <p>Explore what makes our services stand out in the digital landscape.</p>
         </div>
         <div className="features-boxes">
-          {[
-            {
-              title: "Google My Business (GMB)",
-              img: "https://www.elearninfotech.com/img/skills/digitalmarketing/google-ads.webp",
-              desc: "Enhance local visibility with optimized GMB listings."
-            },
-            {
-              title: "SEO-Driven Strategy",
-              img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl0I0lp5K9oTkcQNRqvnye0rY_tybaByhuUaP_BNgSH569apwOlMcyjWWiIfeK6k60HK8&usqp=CAU",
-              desc: "Boost your search rankings with effective SEO techniques."
-            },
-            {
-              title: "Content Creation",
-              img: "https://th.bing.com/th/id/OIP.CLBVr2MZCQHk1-Mb_rWIAQHaHa?pid=ImgDet&w=159&h=159&c=7",
-              desc: "Drive engagement with high-quality, relevant content across platforms."
-            },
-            {
-              title: "Advanced Analytics",
-              img: "https://cdn-icons-png.flaticon.com/512/4202/4202840.png",
-              desc: "Track, measure, and refine your digital campaigns with precision."
-            },
-            {
-              title: "Social Media Marketing",
-              img: "https://cdn-icons-png.flaticon.com/512/2965/2965567.png",
-              desc: "Connect with your audience through curated social strategies."
-            },
-            {
-              title: "Email Campaigns",
-              img: "https://bowwe.com/upload/domain/37991/images/university/recruitment-specialist.webp?3820038",
-              desc: "Send impactful emails that nurture leads and improve conversions."
-            },
-          ].map((feature, i) => (
+          {[{
+            title: "Google My Business (GMB)",
+            img: "https://www.elearninfotech.com/img/skills/digitalmarketing/google-ads.webp",
+            desc: "Enhance local visibility with optimized GMB listings."
+          },
+          {
+            title: "SEO-Driven Strategy",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl0I0lp5K9oTkcQNRqvnye0rY_tybaByhuUaP_BNgSH569apwOlMcyjWWiIfeK6k60HK8&usqp=CAU",
+            desc: "Boost your search rankings with effective SEO techniques."
+          },
+          {
+            title: "Content Creation",
+            img: "https://th.bing.com/th/id/OIP.CLBVr2MZCQHk1-Mb_rWIAQHaHa?pid=ImgDet&w=159&h=159&c=7",
+            desc: "Drive engagement with high-quality, relevant content across platforms."
+          },
+          {
+            title: "Advanced Analytics",
+            img: "https://cdn-icons-png.flaticon.com/512/4202/4202840.png",
+            desc: "Track, measure, and refine your digital campaigns with precision."
+          },
+          {
+            title: "Social Media Marketing",
+            img: "https://cdn-icons-png.flaticon.com/512/2965/2965567.png",
+            desc: "Connect with your audience through curated social strategies."
+          },
+          {
+            title: "Email Campaigns",
+            img: "https://bowwe.com/upload/domain/37991/images/university/recruitment-specialist.webp?3820038",
+            desc: "Send impactful emails that nurture leads and improve conversions."
+          }].map((feature, i) => (
             <div className="features-box" key={i}>
               <img src={feature.img} alt={feature.title} className="feature-img" />
               <h3>{feature.title}</h3>
@@ -139,13 +150,37 @@ const Home = () => {
             <h2>Contact Us</h2>
             <form onSubmit={handleSubmit}>
               <label htmlFor="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your name" required />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
 
               <label htmlFor="email">Your Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email" required />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
 
               <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" placeholder="Your message" rows="4" required></textarea>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your message"
+                rows="4"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
 
               <button type="submit" className="submit-btn">Send Message</button>
             </form>
@@ -156,10 +191,8 @@ const Home = () => {
         </div>
       </section>
 
-      
     </main>
   );
 };
 
 export default Home;
-

@@ -7,7 +7,7 @@ const About = () => {
       {/* 🚀 Hero Section with Two Columns */}
       <div className="hero-section-split">
         <div className="hero-left">
-          <h1>Welcome to ThinkAcademies</h1>
+          <h1>Welcome to Think Academies</h1>
           <p>We help businesses grow through powerful and smart digital marketing strategies.</p>
         </div>
         <div className="hero-right">
@@ -65,9 +65,9 @@ const About = () => {
         <h2>Our Office Gallery</h2>
         <div className="gallery-grid">
           <img src="https://lh3.googleusercontent.com/p/AF1QipOtAz5VpO3tlJJfDc47UAVV-coYaNF3rnV9LSuf=s1360-w1360-h1020" alt="Office 1" />
-          <img src="https://lh3.googleusercontent.com/p/AF1QipNwhPGqyCUexwIRQ50yAJG4loaC-ejgRY0PG89j=s1360-w1360-h1020" alt="Office 2" />
+          <img src="https://lh3.googleusercontent.com/p/AF1QipNQ4wRYtObrrLtXOtS0priL1_JudZ0v4t4aSW4d=s1360-w1360-h1020-rw" alt="Office 2" />
           <img src="https://lh3.googleusercontent.com/p/AF1QipOyLkU2W1LdhsZd4Q5jtx3c5Md8NdeV8Qvvep0v=s1360-w1360-h1020" alt="Office 3" />
-          <img src="https://lh3.googleusercontent.com/p/AF1QipPH_00KQXakiMvYVm12qL3Q3R77sNblrLN4dRJs=s1360-w1360-h1020" alt="Office 4" />
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPt7nIBFl_GdXCD1orTiB77W8zJUXVUZADNcOeW=s1360-w1360-h1020-rw" alt="Office 4" />
         </div>
       </div>
     </div>
