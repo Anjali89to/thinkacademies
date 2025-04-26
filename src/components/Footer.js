@@ -37,10 +37,11 @@ const Footer = () => {
             <li>Email: <a href="mailto:info@codeology.in">info@thinkacademies.in</a></li>
             <li>Phone: <a href="tel:+918383989274">+91-8383989274</a></li>
             <li>
-              Address: <br />
-               6th Floor, Sector-142,<br />
-              Noida, Uttar Pradesh - 201301
-            </li>
+  Address: <br />
+  6th Floor, Altf Spaces, Sector-142, <br />
+  Noida, Uttar Pradesh - 201304
+</li>
+
           </ul>
         </div>
 
